@@ -7,7 +7,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Simple Js Actions
-       uses: actions/hello-world-javascript-action@v1
+       uses: actions/hello-world-javascript-action@v2
        with:
          who-to-greet: Naveen
      - name: Log Greeting Time
