@@ -1,11 +1,14 @@
 name: first yml file with shell commands
-on: [push]
+on: 
+  #push:
+  repository_dispatch:
+    types: ["test"]    
 jobs:
   run-shell-command:
     runs-on: ubuntu-latest
     steps:
     - name: display a string
-      run: echo "hello git actions"
+      run: echo "Hello git actions"
     - name: multiline script
       run: |
         node -v
