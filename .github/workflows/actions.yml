@@ -13,13 +13,13 @@ jobs:
         echo $GITHUB_SHA
         echo $GITHUB_REPOSITORY
         echo $GITHUB_WORKSPACE
-        echo "{{ github.token }}"
+        echo "${{ github.token }}"
      - name: checkout
        uses: actions/checkout@v1
      - name: Files after checkout
        run: |
         pwd
-        ls  
+        ls -a
     #  - name: Simple Js Actions
     #    uses: actions/hello-world-javascript-action@v1
     #    with:
