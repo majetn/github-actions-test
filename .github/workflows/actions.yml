@@ -4,7 +4,18 @@ name: Actions Workflow
 on:
   repository_dispatch:
     types: [build]
-  #push:
+  push:
+    branches:
+      - main
+      - 'payload/**'
+      - '!payload/abc'
+    tags:
+      - v1.*
+    paths:
+      - '**.js'  
+    # branches-ignore:
+    #   - null
+
   #pull_request:
   #  types: [closed, assigned, opened, reopened]
   #schedule:
